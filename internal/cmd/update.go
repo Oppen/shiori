@@ -132,7 +132,7 @@ func updateHandler(cmd *cobra.Command, args []string) {
 		chDone := make(chan struct{})
 		chProblem := make(chan int, 10)
 		chMessage := make(chan interface{}, 10)
-		semaphore := make(chan struct{}, 10)
+		semaphore := make(chan struct{}, 1)
 
 		cInfo.Println("Downloading article(s)...")
 
